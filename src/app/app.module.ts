@@ -13,8 +13,18 @@ import { DropdownDirective } from './shared/dropdown.directive';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', component: RecipesComponent },
-  { path: 'recipes', component: RecipesComponent },
+  { 
+    path: '', 
+    component: RecipesComponent 
+  },
+  { 
+    path: 'recipes', 
+    component: RecipesComponent,  
+    children: [{
+      path: ':id',
+      component: RecipeDetailComponent
+    }]
+  },
   { path: 'shoppinglist', component: ShoppingListComponent }
 ];
 
