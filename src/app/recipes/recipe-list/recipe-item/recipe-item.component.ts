@@ -11,6 +11,7 @@ import { Recipe } from '../../recipe.model';
 export class RecipeItemComponent implements OnInit {
 
   @Input() recipeItem: Recipe;
+  @Input() recipeItemIndex: number;
   
   constructor(
     private recipeServices: RecipeServices, 
@@ -19,10 +20,10 @@ export class RecipeItemComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  selectRecipe(recipe: Recipe){
+  selectRecipe(id: number){
     //this.recipeServices.onSelectedRecipe.emit(recipe);
     //this.recipeServices.getSelectedRecipe();
-    this.router.navigate(['recipes', 0])
+    this.router.navigate(['recipes', id]);
   }
 
 }

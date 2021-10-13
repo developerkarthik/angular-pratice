@@ -5,7 +5,7 @@
             ></app-recipe-list>
     </div>
     <div class="col-md-7">
-        <app-recipe-detail 
+        <!-- <app-recipe-detail 
             *ngIf="selectedRecipe; else notSelecteMsg"
             [recipeDetail] = "selectedRecipe"
             ></app-recipe-detail>
@@ -13,6 +13,7 @@
             <p>
                 Please select the Recipe Item from the list.
             </p>
-        </ng-template>    
+        </ng-template>     -->
+        <router-outlet></router-outlet>
     </div>
 </div>

@@ -18,8 +18,7 @@ export class RecipeServices{
         return this.recipeList.slice();
     }
 
-    getSelectedRecipe(){
-        this.route.params.subscribe(params => console.log(params));
-        //return this.recipeList.slice(id, 1);
+    getSelectedRecipe(id : number){
+        return this.recipeList[id];
     }
 }
