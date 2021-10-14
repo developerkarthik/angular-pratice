@@ -15,6 +15,11 @@ export class ShoppinglistServices{
 
     saveIngredients(Ing: Ingredients){
         this.IngredientList.push(Ing);
-        this.IngredientSaved.emit(this.IngredientList);
+        this.IngredientSaved.emit(this.IngredientList.slice());
+    }
+
+    moveToShoppingList(Ing: Ingredients[]){
+        this.IngredientList.push(...Ing);
+        this.IngredientSaved.emit(this.IngredientList.slice());
     }
 }

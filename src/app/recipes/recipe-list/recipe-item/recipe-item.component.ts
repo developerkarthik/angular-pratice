@@ -20,10 +20,10 @@ export class RecipeItemComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  selectRecipe(id: number){
-    //this.recipeServices.onSelectedRecipe.emit(recipe);
-    //this.recipeServices.getSelectedRecipe();
-    this.router.navigate(['recipes', id]);
-  }
+  // selectRecipe(id: number){
+  //   //this.recipeServices.onSelectedRecipe.emit(recipe);
+  //   //this.recipeServices.getSelectedRecipe();
+  //   this.router.navigate(['recipes', id]);
+  // }
 
 }

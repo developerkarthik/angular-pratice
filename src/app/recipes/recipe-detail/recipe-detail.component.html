@@ -8,8 +8,8 @@
               Action <span class="caret"></span>
             </button>
             <ul class="dropdown-menu">
-              <li><a href="#">To shopping list</a></li>
-              <li><a href="#">Remove</a></li>
+              <li><a [ngStyle]= "{cursor: 'pointer'}" (click)="moveToShoppingList()">To shopping list</a></li>
+              <li><a [ngStyle]= "{cursor: 'pointer'}" (click)="removeRecipe()">Remove</a></li>
             </ul>
           </div>
     </div>

@@ -5,8 +5,7 @@ import { Ingredients } from '../shared/ingredients.model';
 @Component({
   selector: 'app-shopping-list',
   templateUrl: './shopping-list.component.html',
-  styleUrls: ['./shopping-list.component.css'],
-  providers: [ShoppinglistServices]
+  styleUrls: ['./shopping-list.component.css']
 })
 export class ShoppingListComponent implements OnInit {
 
@@ -19,6 +18,7 @@ export class ShoppingListComponent implements OnInit {
     this.IngredientList = this.SLServices.getIngredients();
     this.SLServices.IngredientSaved.subscribe(
       (Ingredients: Ingredients[]) => {
+        console.log(Ingredients);
         this.IngredientList = Ingredients;
       }
     );
