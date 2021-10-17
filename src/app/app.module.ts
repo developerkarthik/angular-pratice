@@ -12,6 +12,7 @@ import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.com
 import { DropdownDirective } from './shared/dropdown.directive';
 import { Routes, RouterModule } from '@angular/router';
 import { ShoppinglistServices } from './services/shoppinglist.services';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
   { 
@@ -43,6 +44,7 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(routes)
   ],
   providers: [ShoppinglistServices],

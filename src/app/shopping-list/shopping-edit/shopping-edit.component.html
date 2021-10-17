@@ -1,12 +1,12 @@
-<form>
+<form [formGroup]="SLForm">
     <div class="row">
-        <div class="col-sm-5 form-group">
+        <div class="col-sm-5 form-group" [ngClass]="{'has-error' : SLForm.get('name').invalid && SLForm.get('name').touched}">
             <label for="name">Name</label>
-            <input type="text" class="form-control" id="name" #nameValue>
+            <input type="text" class="form-control" id="name" formControlName="name">
         </div>
         <div class="col-sm-5 form-group">
             <label for="amount">Amount</label>
-            <input type="number" class="form-control" id="amount" #amountValue>
+            <input type="number" class="form-control" id="amount" formControlName="amount">
         </div>
     </div>
     <div class="row">
